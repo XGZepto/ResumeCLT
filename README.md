@@ -1,10 +1,10 @@
 # ResumeCLT
 
-This is a command line tool to help HR interns rename all the resumes they have received.
+This is a command line tool to help HR interns rename all the resumes they have received with the power of OpenAI and OCR.
 
 ## Requirements
 
-You need to have `Python`, `pip`, `poppler-utils` and `tesseract` installed.
+You need to have `python`, `pip`, `poppler-utils` and `tesseract` installed.
 
 ```
 pip install -r requirements.txt
