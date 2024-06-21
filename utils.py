@@ -75,10 +75,11 @@ def generate_filename(parsed_info, args):
     filename = f'{education_level}-{parsed_info['name']}-{parsed_info['school']}-{parsed_info['major']}-{parsed_info['grad_year']}'
 
     # If the graduate year is after 2024, mark as "实习"; otherwise mark as "全职"
-    if int(parsed_info['grad_year']) > 2024:
-        filename = f'实习-{filename}'
-    else:
-        filename = f'全职-{filename}'
+    if parsed_info['grad_year']:
+        if int(parsed_info['grad_year']) > 2024:
+            filename = f'实习-{filename}'
+        else:
+            filename = f'全职-{filename}'
 
     if args.target_list:
         # read schools from target list, each line contains a school name
