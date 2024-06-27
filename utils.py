@@ -82,7 +82,7 @@ def generate_filename(parsed_info, args):
 
     if args.target_list:
         # read schools from target list, each line contains a school name
-        with open(args.target_list, 'r') as f:
+        with open(args.target_list, 'r', encoding='utf-8') as f:
             school_list = f.readlines()
             school_list = [x.strip() for x in school_list]
             if parsed_info['school'] in school_list:
